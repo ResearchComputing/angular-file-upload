@@ -10,8 +10,8 @@ let {
 
 
 export default (FileDirective) => {
-    
-    
+
+
     class FileSelect extends FileDirective {
         /**
          * Creates instance of {FileSelect} object
@@ -28,9 +28,9 @@ export default (FileDirective) => {
                 // Name of property inside uploader._directive object
                 prop: 'select'
             });
-            
+
             super(extendedOptions);
-            
+
             if(!this.uploader.isHTML5) {
                 this.element.removeAttr('multiple');
             }
@@ -68,11 +68,12 @@ export default (FileDirective) => {
             if(this.isEmptyAfterSelection()) {
                 this.element.prop('value', null);
                 this.element.replaceWith(this.element = this.element.clone(true)); // IE fix
+                this.bind();
             }
         }
     }
-    
-    
+
+
     return FileSelect;
 }
 

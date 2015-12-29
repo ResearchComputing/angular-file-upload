@@ -1614,6 +1614,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    if (this.isEmptyAfterSelection()) {
 	                        this.element.prop("value", null);
 	                        this.element.replaceWith(this.element = this.element.clone(true)); // IE fix
+	                        this.bind();
 	                    }
 	                }
 	            }
@@ -1996,4 +1997,3 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ ])
 });
 ;
-//# sourceMappingURL=angular-file-upload.js.map
